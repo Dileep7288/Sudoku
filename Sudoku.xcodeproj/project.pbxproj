@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F5FED5051EF24B7419DFDCD /* Pods_Sudoku_SudokuUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC4C151F914EB9AC63EFD8C /* Pods_Sudoku_SudokuUITests.framework */; };
+		70D441B245E9F7E70F695638 /* Pods_SudokuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B15F7FA40845E2986A6D9B /* Pods_SudokuTests.framework */; };
+		8A60E6FFE68E6CDCA6DC2250 /* Pods_Sudoku.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 819CBF02BE4F146C872743BF /* Pods_Sudoku.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8004D1232D5723A90052DD3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8004D1042D5723A80052DD3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8004D10B2D5723A80052DD3D;
+			remoteInfo = Sudoku;
+		};
+		8004D12D2D5723A90052DD3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8004D1042D5723A80052DD3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8004D10B2D5723A80052DD3D;
+			remoteInfo = Sudoku;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8057AF062D688D2D0035F0E7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5FC4C151F914EB9AC63EFD8C /* Pods_Sudoku_SudokuUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sudoku_SudokuUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8004D10C2D5723A80052DD3D /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8004D1222D5723A90052DD3D /* SudokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8004D12C2D5723A90052DD3D /* SudokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		819CBF02BE4F146C872743BF /* Pods_Sudoku.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sudoku.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD1AF8B1412987160849FEF /* Pods-Sudoku-SudokuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku-SudokuUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sudoku-SudokuUITests/Pods-Sudoku-SudokuUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		90656E1C1CDE2DAC3E5FB3EA /* Pods-Sudoku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku.debug.xcconfig"; path = "Target Support Files/Pods-Sudoku/Pods-Sudoku.debug.xcconfig"; sourceTree = "<group>"; };
+		AAE375F6318A7B9B1E965336 /* Pods-Sudoku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku.release.xcconfig"; path = "Target Support Files/Pods-Sudoku/Pods-Sudoku.release.xcconfig"; sourceTree = "<group>"; };
+		B9B15F7FA40845E2986A6D9B /* Pods_SudokuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SudokuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB7058C2CF446DEF40166850 /* Pods-Sudoku-SudokuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sudoku-SudokuUITests.release.xcconfig"; path = "Target Support Files/Pods-Sudoku-SudokuUITests/Pods-Sudoku-SudokuUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C40F2E2952EB9E2BBDD02E15 /* Pods-SudokuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuTests.release.xcconfig"; path = "Target Support Files/Pods-SudokuTests/Pods-SudokuTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBE211806DFE43F3DC0072E6 /* Pods-SudokuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SudokuTests.debug.xcconfig"; path = "Target Support Files/Pods-SudokuTests/Pods-SudokuTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8088B2E92D717BE200B41CC1 /* Exceptions for "Sudoku" folder in "Sudoku" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8004D10B2D5723A80052DD3D /* Sudoku */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8004D1252D5723A90052DD3D /* SudokuTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SudokuTests;
+			sourceTree = "<group>";
+		};
+		8004D12F2D5723A90052DD3D /* SudokuUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SudokuUITests;
+			sourceTree = "<group>";
+		};
+		801E14142D575B1B009C2647 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		801E14152D575B23009C2647 /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		801E14162D575B48009C2647 /* Controllers */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8088B2E52D717BE200B41CC1 /* Sudoku */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8088B2E92D717BE200B41CC1 /* Exceptions for "Sudoku" folder in "Sudoku" target */,
+			);
+			path = Sudoku;
+			sourceTree = "<group>";
+		};
+		8088B2ED2D71968A00B41CC1 /* Constants */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Constants;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8004D1092D5723A80052DD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A60E6FFE68E6CDCA6DC2250 /* Pods_Sudoku.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8004D11F2D5723A90052DD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70D441B245E9F7E70F695638 /* Pods_SudokuTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8004D1292D5723A90052DD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F5FED5051EF24B7419DFDCD /* Pods_Sudoku_SudokuUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		658D3C03673A0FF4E0F6458D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				819CBF02BE4F146C872743BF /* Pods_Sudoku.framework */,
+				5FC4C151F914EB9AC63EFD8C /* Pods_Sudoku_SudokuUITests.framework */,
+				B9B15F7FA40845E2986A6D9B /* Pods_SudokuTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68D469DF52AF9B824EBA46CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90656E1C1CDE2DAC3E5FB3EA /* Pods-Sudoku.debug.xcconfig */,
+				AAE375F6318A7B9B1E965336 /* Pods-Sudoku.release.xcconfig */,
+				8FD1AF8B1412987160849FEF /* Pods-Sudoku-SudokuUITests.debug.xcconfig */,
+				BB7058C2CF446DEF40166850 /* Pods-Sudoku-SudokuUITests.release.xcconfig */,
+				CBE211806DFE43F3DC0072E6 /* Pods-SudokuTests.debug.xcconfig */,
+				C40F2E2952EB9E2BBDD02E15 /* Pods-SudokuTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8004D1032D5723A80052DD3D = {
+			isa = PBXGroup;
+			children = (
+				8088B2ED2D71968A00B41CC1 /* Constants */,
+				8088B2E52D717BE200B41CC1 /* Sudoku */,
+				801E14142D575B1B009C2647 /* Models */,
+				801E14152D575B23009C2647 /* Views */,
+				801E14162D575B48009C2647 /* Controllers */,
+				8004D1252D5723A90052DD3D /* SudokuTests */,
+				8004D12F2D5723A90052DD3D /* SudokuUITests */,
+				8004D10D2D5723A80052DD3D /* Products */,
+				68D469DF52AF9B824EBA46CC /* Pods */,
+				658D3C03673A0FF4E0F6458D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8004D10D2D5723A80052DD3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8004D10C2D5723A80052DD3D /* Sudoku.app */,
+				8004D1222D5723A90052DD3D /* SudokuTests.xctest */,
+				8004D12C2D5723A90052DD3D /* SudokuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8004D10B2D5723A80052DD3D /* Sudoku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8004D1352D5723A90052DD3D /* Build configuration list for PBXNativeTarget "Sudoku" */;
+			buildPhases = (
+				BA6C9D86F0F5F748E78A9ECF /* [CP] Check Pods Manifest.lock */,
+				8004D1082D5723A80052DD3D /* Sources */,
+				8004D1092D5723A80052DD3D /* Frameworks */,
+				8004D10A2D5723A80052DD3D /* Resources */,
+				DF513336557617793C595A27 /* [CP] Embed Pods Frameworks */,
+				8057AF062D688D2D0035F0E7 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				801E14142D575B1B009C2647 /* Models */,
+				801E14152D575B23009C2647 /* Views */,
+				801E14162D575B48009C2647 /* Controllers */,
+				8088B2E52D717BE200B41CC1 /* Sudoku */,
+				8088B2ED2D71968A00B41CC1 /* Constants */,
+			);
+			name = Sudoku;
+			productName = Sudoku;
+			productReference = 8004D10C2D5723A80052DD3D /* Sudoku.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8004D1212D5723A90052DD3D /* SudokuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8004D13A2D5723A90052DD3D /* Build configuration list for PBXNativeTarget "SudokuTests" */;
+			buildPhases = (
+				6202F6A3FE5682D96608634A /* [CP] Check Pods Manifest.lock */,
+				8004D11E2D5723A90052DD3D /* Sources */,
+				8004D11F2D5723A90052DD3D /* Frameworks */,
+				8004D1202D5723A90052DD3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8004D1242D5723A90052DD3D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8004D1252D5723A90052DD3D /* SudokuTests */,
+			);
+			name = SudokuTests;
+			productName = SudokuTests;
+			productReference = 8004D1222D5723A90052DD3D /* SudokuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8004D12B2D5723A90052DD3D /* SudokuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8004D13D2D5723A90052DD3D /* Build configuration list for PBXNativeTarget "SudokuUITests" */;
+			buildPhases = (
+				93019B4B0A9761AEA994CDCD /* [CP] Check Pods Manifest.lock */,
+				8004D1282D5723A90052DD3D /* Sources */,
+				8004D1292D5723A90052DD3D /* Frameworks */,
+				8004D12A2D5723A90052DD3D /* Resources */,
+				E85CBFC49285E460949F57C0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8004D12E2D5723A90052DD3D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8004D12F2D5723A90052DD3D /* SudokuUITests */,
+			);
+			name = SudokuUITests;
+			productName = SudokuUITests;
+			productReference = 8004D12C2D5723A90052DD3D /* SudokuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8004D1042D5723A80052DD3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					8004D10B2D5723A80052DD3D = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					8004D1212D5723A90052DD3D = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 8004D10B2D5723A80052DD3D;
+					};
+					8004D12B2D5723A90052DD3D = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 8004D10B2D5723A80052DD3D;
+					};
+				};
+			};
+			buildConfigurationList = 8004D1072D5723A80052DD3D /* Build configuration list for PBXProject "Sudoku" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8004D1032D5723A80052DD3D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8004D10D2D5723A80052DD3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8004D10B2D5723A80052DD3D /* Sudoku */,
+				8004D1212D5723A90052DD3D /* SudokuTests */,
+				8004D12B2D5723A90052DD3D /* SudokuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8004D10A2D5723A80052DD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8004D1202D5723A90052DD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8004D12A2D5723A90052DD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6202F6A3FE5682D96608634A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SudokuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93019B4B0A9761AEA994CDCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sudoku-SudokuUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA6C9D86F0F5F748E78A9ECF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sudoku-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF513336557617793C595A27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku/Pods-Sudoku-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku/Pods-Sudoku-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sudoku/Pods-Sudoku-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E85CBFC49285E460949F57C0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku-SudokuUITests/Pods-Sudoku-SudokuUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sudoku-SudokuUITests/Pods-Sudoku-SudokuUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sudoku-SudokuUITests/Pods-Sudoku-SudokuUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8004D1082D5723A80052DD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8004D11E2D5723A90052DD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8004D1282D5723A90052DD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8004D1242D5723A90052DD3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8004D10B2D5723A80052DD3D /* Sudoku */;
+			targetProxy = 8004D1232D5723A90052DD3D /* PBXContainerItemProxy */;
+		};
+		8004D12E2D5723A90052DD3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8004D10B2D5723A80052DD3D /* Sudoku */;
+			targetProxy = 8004D12D2D5723A90052DD3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8004D1362D5723A90052DD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90656E1C1CDE2DAC3E5FB3EA /* Pods-Sudoku.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sudoku/Sudoku.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V3SXH4HFW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sudoku/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cykul.Sudoku;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8004D1372D5723A90052DD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAE375F6318A7B9B1E965336 /* Pods-Sudoku.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sudoku/Sudoku.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V3SXH4HFW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sudoku/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cykul.Sudoku;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8004D1382D5723A90052DD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8004D1392D5723A90052DD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8004D13B2D5723A90052DD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE211806DFE43F3DC0072E6 /* Pods-SudokuTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = New.SudokuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sudoku.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sudoku";
+			};
+			name = Debug;
+		};
+		8004D13C2D5723A90052DD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C40F2E2952EB9E2BBDD02E15 /* Pods-SudokuTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = New.SudokuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sudoku.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sudoku";
+			};
+			name = Release;
+		};
+		8004D13E2D5723A90052DD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FD1AF8B1412987160849FEF /* Pods-Sudoku-SudokuUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = New.SudokuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sudoku;
+			};
+			name = Debug;
+		};
+		8004D13F2D5723A90052DD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB7058C2CF446DEF40166850 /* Pods-Sudoku-SudokuUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = New.SudokuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sudoku;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8004D1072D5723A80052DD3D /* Build configuration list for PBXProject "Sudoku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8004D1382D5723A90052DD3D /* Debug */,
+				8004D1392D5723A90052DD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8004D1352D5723A90052DD3D /* Build configuration list for PBXNativeTarget "Sudoku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8004D1362D5723A90052DD3D /* Debug */,
+				8004D1372D5723A90052DD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8004D13A2D5723A90052DD3D /* Build configuration list for PBXNativeTarget "SudokuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8004D13B2D5723A90052DD3D /* Debug */,
+				8004D13C2D5723A90052DD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8004D13D2D5723A90052DD3D /* Build configuration list for PBXNativeTarget "SudokuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8004D13E2D5723A90052DD3D /* Debug */,
+				8004D13F2D5723A90052DD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8004D1042D5723A80052DD3D /* Project object */;
+}
