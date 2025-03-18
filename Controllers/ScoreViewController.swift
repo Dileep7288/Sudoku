@@ -365,12 +365,12 @@ class ScoreViewController: UIViewController {
         ])
     }
     private func getProfileData() {
-        guard let url = URL(string: "https://cykul.in/app/lifeCykul/webservice/departments/profileDetails.php") else {
+        guard let url = URL(string: "") else {
             print("Invalid URL")
             return
         }
 
-        let body: String = "mobileNumber=7288037796&whichapp=campuslife"
+        let body: String = ""
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = body.data(using: .utf8)
