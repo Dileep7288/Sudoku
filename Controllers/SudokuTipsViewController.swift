@@ -3,6 +3,7 @@ import UIKit
 class SudokuTipsViewController: UIViewController {
     
     var previousCard: UIView?
+    private var backGroundimage = UIImageView()
     
     private let contentView: UIView = {
         let view = UIView()
@@ -34,21 +35,9 @@ class SudokuTipsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBackgroundImage()
         
         navigationController?.navigationBar.tintColor = .white
-        
-        let backGroundimage = UIImageView()
-        backGroundimage.translatesAutoresizingMaskIntoConstraints = false
-        backGroundimage.image = UIImage(named: "Bamboo Zen")
-        backGroundimage.contentMode = .scaleToFill
-        view.addSubview(backGroundimage)
-        
-        NSLayoutConstraint.activate([
-            backGroundimage.topAnchor.constraint(equalTo: view.topAnchor),
-            backGroundimage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            backGroundimage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backGroundimage.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
         
         view.addSubview(titleView)
         titleView.addSubview(titleLabel)
@@ -56,6 +45,42 @@ class SudokuTipsViewController: UIViewController {
         scrollView.addSubview(contentView)
         addTipsCards()
         setupConstraints()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBackgroundImage), name: NSNotification.Name("BackgroundImageChanged"), object: nil)
+    }
+    
+    private func setupBackgroundImage() {
+        backGroundimage = UIImageView()
+        backGroundimage.translatesAutoresizingMaskIntoConstraints = false
+        backGroundimage.image = UIImage(named: "Bamboo Zen")
+        backGroundimage.contentMode = .scaleToFill
+        view.addSubview(backGroundimage)
+
+        NSLayoutConstraint.activate([
+            backGroundimage.topAnchor.constraint(equalTo: view.topAnchor),
+            backGroundimage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            backGroundimage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backGroundimage.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        loadSavedBackgroundImage()
+    }
+    
+    private func loadSavedBackgroundImage() {
+        if let filePath = UserDefaults.standard.string(forKey: "selectedBackgroundImagePath") {
+            let fileURL = URL(fileURLWithPath: filePath)
+            
+            if let imageData = try? Data(contentsOf: fileURL),
+               let savedImage = UIImage(data: imageData) {
+                backGroundimage.image = savedImage
+            } else {
+                backGroundimage.image = UIImage(named: "Bamboo Zen")
+            }
+        } else {
+            backGroundimage.image = UIImage(named: "Bamboo Zen")
+        }
+    }
+    
+    @objc private func updateBackgroundImage() {
+        loadSavedBackgroundImage()
     }
 
     private func addTipsCards() {
