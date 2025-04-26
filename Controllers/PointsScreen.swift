@@ -437,7 +437,7 @@ class PointsScreen: UIViewController {
                 print("Difficulty Popup Presented")
             })
         } else if sender.currentTitle == "EXIT" {
-            // Remove the saved image file from disk
+     
             if let filePath = UserDefaults.standard.string(forKey: "selectedBackgroundImagePath") {
                 let fileURL = URL(fileURLWithPath: filePath)
                 do {
@@ -448,13 +448,11 @@ class PointsScreen: UIViewController {
                 }
             }
 
-            // Clear UserDefaults
             UserDefaults.standard.removeObject(forKey: "selectedBackgroundImage")
             UserDefaults.standard.removeObject(forKey: "selectedBackgroundImagePath")
             UserDefaults.standard.removeObject(forKey: "selectedGridColor")
             UserDefaults.standard.synchronize()
 
-            // Navigate to CustomViewController
             let customVC = CustomViewController()
             if let navController = navigationController {
                 navController.pushViewController(customVC, animated: true)
@@ -465,88 +463,90 @@ class PointsScreen: UIViewController {
             present(streakPopupVC, animated: true, completion: nil)
         }
     }
-//    @objc func shareTapped() {
-//        // Save the original color of sudokuLabel and change it temporarily to black for sharing
-//        let originalColor = sudokuLabel.textColor
-//        sudokuLabel.textColor = .black
-//
-//        // Capture the combined view (cardView + background starting from sudokuLabel) as an image
-//        guard let image = captureCardViewWithBackground() else {
-//            sudokuLabel.textColor = originalColor // Restore the original color if capture fails
-//            return
-//        }
-//
-//        let activityVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-//
-//        // For iPad support
-//        if let popoverController = activityVC.popoverPresentationController {
-//            popoverController.sourceView = self.view
-//            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-//            popoverController.permittedArrowDirections = []
-//        }
-//
-//        present(activityVC, animated: true, completion: {
-//            // Restore sudokuLabel's color once the sharing UI is presented
-//            self.sudokuLabel.textColor = originalColor
-//        })
-//    }
-//
-//    // Function to Capture the Combined View (from sudokuLabel to the end of cardView)
-//    func captureCardViewWithBackground() -> UIImage? {
-//        // Create a container view to hold both the cardView and sudokuLabel
-//        let combinedView = UIView()
-//
-//        // Set the combined view size (cardView + sudokuLabel + any padding or background)
-//        let cardViewFrame = cardView.frame
-//        let sudokuLabelFrame = sudokuLabel.frame
-//        let combinedHeight = cardViewFrame.height + sudokuLabelFrame.height
-//
-//        // Create a frame for the combined view that covers both the cardView and sudokuLabel
-//        combinedView.frame = CGRect(x: 0, y: 0, width: cardViewFrame.width, height: combinedHeight)
-//        
-//        // Add cardView and sudokuLabel to the combined view
-//        combinedView.addSubview(cardView)
-//        combinedView.addSubview(sudokuLabel)
-//
-//        // Position sudokuLabel above the cardView
-//        sudokuLabel.frame.origin = CGPoint(x: (cardView.frame.width - sudokuLabel.frame.width) / 2, y: 0)
-//        cardView.frame.origin = CGPoint(x: 0, y: sudokuLabel.frame.height)
-//
-//        // Capture the combined view as an image
-//        let renderer = UIGraphicsImageRenderer(size: combinedView.bounds.size)
-//        let image = renderer.image { context in
-//            combinedView.layer.render(in: context.cgContext)
-//        }
-//
-//        return image
-//    }
 
     @objc func shareTapped() {
-        guard let image = captureCardView(),
+        guard let image = generateSudokuShareImage(level: selectedDifficulty, score: points, timeTaken: elapsedTime),
               let imageURL = saveImageToAppGroupContainer(image: image) else {
-            print("Failed to capture or save image.")
+            print("Failed to generate or save image.")
             return
         }
 
-        let activityViewController = UIActivityViewController(activityItems: [imageURL], applicationActivities: nil)
-
-        activityViewController.excludedActivityTypes = [.addToReadingList, .postToFacebook]
-
-        present(activityViewController, animated: true, completion: nil)
+        let activityVC = UIActivityViewController(activityItems: [imageURL], applicationActivities: nil)
+        present(activityVC, animated: true)
     }
 
-    func captureCardView() -> UIImage? {
-        let renderer = UIGraphicsImageRenderer(size: cardView.bounds.size)
-        return renderer.image { context in
-            cardView.drawHierarchy(in: CGRect(origin: .zero, size: cardView.bounds.size), afterScreenUpdates: true)
+    func generateSudokuShareImage(level: String, score: Int, timeTaken: String) -> UIImage? {
+        let canvasSize = CGSize(width: 300, height: 380)
+        let renderer = UIGraphicsImageRenderer(size: canvasSize)
+
+        let image = renderer.image { context in
+ 
+            if let background = UIImage(named: "app") {
+                background.draw(in: CGRect(origin: .zero, size: canvasSize))
+            }
+
+            let titleAttributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.boldSystemFont(ofSize: 26),
+                .foregroundColor: UIColor.white
+            ]
+
+            let subtitleAttributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 18),
+                .foregroundColor: UIColor.white
+            ]
+
+            let infoAttributes: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 16),
+                .foregroundColor: UIColor.white
+            ]
+
+            var yOffset: CGFloat = 20
+
+            let title = "Sudoku"
+            let titleSize = title.size(withAttributes: titleAttributes)
+            title.draw(at: CGPoint(x: (canvasSize.width - titleSize.width) / 2, y: yOffset), withAttributes: titleAttributes)
+            yOffset += titleSize.height + 10
+
+            if let winnerImage = UIImage(named: "winner") {
+                let imageSize = CGSize(width: 80, height: 80)
+                let imageOrigin = CGPoint(x: (canvasSize.width - imageSize.width) / 2, y: yOffset)
+                winnerImage.draw(in: CGRect(origin: imageOrigin, size: imageSize))
+                yOffset += imageSize.height + 10
+            }
+
+            let congrats = "Congratulations!"
+            let congratsSize = congrats.size(withAttributes: subtitleAttributes)
+            congrats.draw(at: CGPoint(x: (canvasSize.width - congratsSize.width) / 2, y: yOffset), withAttributes: subtitleAttributes)
+            yOffset += congratsSize.height + 8
+
+            let solvedText = "You solved this puzzle!"
+            let solvedSize = solvedText.size(withAttributes: subtitleAttributes)
+            solvedText.draw(at: CGPoint(x: (canvasSize.width - solvedSize.width) / 2, y: yOffset), withAttributes: subtitleAttributes)
+            yOffset += solvedSize.height + 16
+
+            let levelText = "Level: \(level)"
+            let levelSize = levelText.size(withAttributes: infoAttributes)
+            levelText.draw(at: CGPoint(x: (canvasSize.width - levelSize.width) / 2, y: yOffset), withAttributes: infoAttributes)
+            yOffset += levelSize.height + 10
+
+            let scoreText = "Score: \(score)"
+            let scoreSize = scoreText.size(withAttributes: infoAttributes)
+            scoreText.draw(at: CGPoint(x: (canvasSize.width - scoreSize.width) / 2, y: yOffset), withAttributes: infoAttributes)
+            yOffset += scoreSize.height + 10
+
+            let timeText = "Time Taken: \(timeTaken)"
+            let timeSize = timeText.size(withAttributes: infoAttributes)
+            timeText.draw(at: CGPoint(x: (canvasSize.width - timeSize.width) / 2, y: yOffset), withAttributes: infoAttributes)
         }
+
+        return image
     }
 
     func saveImageToAppGroupContainer(image: UIImage) -> URL? {
         guard let imageData = image.jpegData(compressionQuality: 1.0) else { return nil }
         
         let fileManager = FileManager.default
-        guard let sharedContainerURL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.cykul.Sudoku") else {
+        guard let sharedContainerURL = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.cykul.SudokuNew") else {
             print("❌ Could not get App Group container URL.")
             return nil
         }
@@ -558,7 +558,6 @@ class PointsScreen: UIViewController {
             }
             try imageData.write(to: imageURL)
             print("✅ Image saved at:", imageURL.path)
-            
             return imageURL
         } catch {
             print("❌ Failed to save image:", error)

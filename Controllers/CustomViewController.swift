@@ -3,30 +3,64 @@ import UIKit
 class CustomViewController: UIViewController, ThemesPopupDelegate {
     func updateGridBackgroundColor(to color: UIColor) {}
 
-    var backGroundimage: UIImageView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("🔍 UserDefaults Data Before Fetching Puzzle: \(UserDefaults.standard.dictionaryRepresentation())")
         self.navigationItem.hidesBackButton = true
         setupBackgroundImage()
         setupButtons()
+        loadSavedBackgroundImage()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBackgroundImage(_:)), name: NSNotification.Name("BackgroundImageChanged"), object: nil)
+    }
+    
+    private func loadSavedBackgroundImage() {
+        if let filePath = UserDefaults.standard.string(forKey: "selectedBackgroundImagePath") {
+            let fileURL = URL(fileURLWithPath: filePath)
+            
+            if let imageData = try? Data(contentsOf: fileURL),
+               let savedImage = UIImage(data: imageData) {
+                backgroundImageView.image = savedImage
+                print("Background image loaded from:", filePath)
+            } else {
+                print("Failed to load background image")
+            }
+        } else {
+            print("No saved background image found")
+        }
+    }
+
+    @objc private func updateBackgroundImage(_ notification: Notification) {
+        if let filePath = UserDefaults.standard.string(forKey: "selectedBackgroundImagePath") {
+            let fileURL = URL(fileURLWithPath: filePath)
+
+            if let imageData = try? Data(contentsOf: fileURL),
+               let newImage = UIImage(data: imageData) {
+                backgroundImageView.image = newImage
+            } else {
+                print("Failed to load background image from path")
+            }
+        }
     }
 
     private func setupBackgroundImage() {
-        backGroundimage = UIImageView()
-        backGroundimage.translatesAutoresizingMaskIntoConstraints = false
-        backGroundimage.image = UIImage(named: "Bamboo Zen")
-        backGroundimage.contentMode = .scaleToFill
-        view.addSubview(backGroundimage)
+        view.addSubview(backgroundImageView)
 
         NSLayoutConstraint.activate([
-            backGroundimage.topAnchor.constraint(equalTo: view.topAnchor),
-            backGroundimage.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            backGroundimage.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backGroundimage.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
+            backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
+    
+    let backgroundImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Bamboo Zen")
+        imageView.contentMode = .scaleToFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
 
     private func setupButtons() {
         let button1 = createButton(title: "START GAME", action: #selector(startGameTapped))
@@ -98,7 +132,7 @@ class CustomViewController: UIViewController, ThemesPopupDelegate {
     }
 
     func updateBackgroundImage(with image: UIImage) {
-        backGroundimage.image = image
+       // backGroundimage.image = image
     }
     
 }
@@ -106,6 +140,16 @@ class CustomViewController: UIViewController, ThemesPopupDelegate {
 class DifficultyPopupViewController: UIViewController {
     
     let popupView = UIView()
+    private let titleLabel = UILabel()
+    private let closeButton = UIButton(type: .system)
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,6 +157,20 @@ class DifficultyPopupViewController: UIViewController {
         setupPopup()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        closeButton.isAccessibilityElement = false
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            UIAccessibility.post(notification: .layoutChanged, argument: self.titleLabel)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.closeButton.isAccessibilityElement = true
+            self.closeButton.accessibilityLabel = "Close"
+        }
+    }
+    
     private func setupPopup() {
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
 
@@ -121,15 +179,14 @@ class DifficultyPopupViewController: UIViewController {
         popupView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(popupView)
 
-        let titleLabel = UILabel()
         titleLabel.text = "Choose Difficulty"
         titleLabel.textColor = .black
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.isAccessibilityElement = true
         popupView.addSubview(titleLabel)
-
-        let closeButton = UIButton(type: .system)
+  
         closeButton.setTitle("✕", for: .normal)
         closeButton.setTitleColor(.black, for: .normal)
         closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .bold)

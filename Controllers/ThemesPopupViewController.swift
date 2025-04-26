@@ -263,7 +263,6 @@ class ThemesPopupViewController: UIViewController {
 
         delegate?.updateBackgroundImage(with: image)
         
-        // Save image to disk and store the path in UserDefaults
         if let filePath = saveImageToDocuments(image: image, fileName: "background.jpg") {
             UserDefaults.standard.set(filePath, forKey: "selectedBackgroundImagePath")
             
@@ -272,14 +271,14 @@ class ThemesPopupViewController: UIViewController {
     }
     
     func saveImageToDocuments(image: UIImage, fileName: String) -> String? {
-        if let data = image.jpegData(compressionQuality: 0.8) { // Compress to reduce size
+        if let data = image.jpegData(compressionQuality: 0.8) { 
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             let fileURL = directory.appendingPathComponent(fileName)
 
             do {
                 try data.write(to: fileURL)
                 print("✅ Image saved at:", fileURL.path)
-                return fileURL.path  // Return file path instead of raw data
+                return fileURL.path
             } catch {
                 print("❌ Failed to save image:", error.localizedDescription)
             }
